@@ -918,7 +918,7 @@ public class FileIoProvider {
           LEN_INT);
       try {
         faultInjectorEventHook.beforeFileIo(volume, WRITE, LEN_INT);
-        super.write(b);
+        //super.write(b);
         profilingEventHook.afterFileIo(volume, WRITE, begin, LEN_INT);
       } catch(Exception e) {
         onFailure(volume, begin);
@@ -935,7 +935,7 @@ public class FileIoProvider {
           .length);
       try {
         faultInjectorEventHook.beforeFileIo(volume, WRITE, b.length);
-        super.write(b);
+        //super.write(b);
         profilingEventHook.afterFileIo(volume, WRITE, begin, b.length);
       } catch(Exception e) {
         onFailure(volume, begin);
@@ -951,7 +951,7 @@ public class FileIoProvider {
       final long begin = profilingEventHook.beforeFileIo(volume, WRITE, len);
       try {
         faultInjectorEventHook.beforeFileIo(volume, WRITE, len);
-        super.write(b, off, len);
+        //super.write(b, off, len);
         profilingEventHook.afterFileIo(volume, WRITE, begin, len);
       } catch(Exception e) {
         onFailure(volume, begin);
